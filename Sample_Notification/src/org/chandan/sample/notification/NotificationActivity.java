@@ -2,6 +2,7 @@ package org.chandan.sample.notification;
 
 import android.app.Activity;
 import android.app.Notification;
+//[You may find v4 library @ http://code.google.com/p/android-mtlist-tutorial/source/browse/trunk/lib/android-support-v4.jar?r=11 ]
 import android.support.v4.app.NotificationCompat;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -40,7 +41,7 @@ public class NotificationActivity extends Activity {
 
 	private static final long[] VIBRATE_PATTERN = {100,200,100,200};
 	
-	private static int NOTIFICATION_COUNT;
+	private static int NOTIFICATION_ID;
 	
 	private Button mButtonSendNotification;
 	private CheckBox mCheckBoxShouldVibrate;
@@ -78,8 +79,8 @@ public class NotificationActivity extends Activity {
      */
     private void updateNotificationIdView(){
     	if(mTextViewNotificationId!=null){
-    		NOTIFICATION_COUNT++;
-    		mTextViewNotificationId.setText("Notification ID: "+NOTIFICATION_COUNT);
+    		NOTIFICATION_ID++;
+    		mTextViewNotificationId.setText("Notification ID: "+NOTIFICATION_ID);
     	}
     }
     
@@ -195,7 +196,7 @@ public class NotificationActivity extends Activity {
     	//intentTargetActivity.addCategory(ACTION_MY_NOTIFICATION_CALLBACK);
     	
     	//For future reference..
-    	intentTargetActivity.putExtra(KEY_ID,NOTIFICATION_COUNT);
+    	intentTargetActivity.putExtra(KEY_ID,NOTIFICATION_ID);
     	intentTargetActivity.putExtra(KEY_TITLE, mStringTitle);
     	intentTargetActivity.putExtra(KEY_MESSAGE, mstringMessage);
     	
@@ -231,6 +232,9 @@ public class NotificationActivity extends Activity {
     	//by setting uri of sound file like:
     	//notificationInfo.sound=soundUri;
     	
+    	//Main thing: custom view!!
+    	//notificationInfo.contentView=remoteView;
+    	
     	//Else you may wish to use the default notification behavior by:
     	//notificationInfo.defaults=Notification.DEFAULT_ALL;
     	
@@ -238,10 +242,10 @@ public class NotificationActivity extends Activity {
     	//Note using this notification ID we can controle post notification behaviour
     	// i.e we may cancel the notification if it exists or check for 
     	//presence of the notification with same id.. etc..
-    	mNotificationManager.notify(NOTIFICATION_COUNT, notificationInfo);
+    	mNotificationManager.notify(NOTIFICATION_ID, notificationInfo);
     	
     	Toast.makeText(NotificationActivity.this, 
-    			"Notification sent with ID:"+NOTIFICATION_COUNT,Toast.LENGTH_SHORT).show();
+    			"Notification sent with ID:"+NOTIFICATION_ID,Toast.LENGTH_SHORT).show();
     	
     	//you may cancel sent notification by using:
     	//mNotificationManager.cancel(NOTIFICATION_COUNT);
