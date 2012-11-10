@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sample_Notification</string>
+    <string name="string_button_text_send_notification">Send Notification</string>
+    <string name="string_edittext_hint_enter_notification_title">Enter notification title...</string>
+    <string name="string_edittext_hint_enter_notification_message">Enter notification message...</string>
+	<string name="string_checkbox_text_vibrate_on_notification">Vibrate device on notification</string>
+	
+
+	<string name="string_button_text_dissmiss">Dismiss</string>
+        
+</resources>

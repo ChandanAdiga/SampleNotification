@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:gravity="left" >
+    
+    <TextView 
+        android:id="@+id/textview_notification_id"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:maxLines="1"
+        android:gravity="center_horizontal">
+    
+    </TextView>
+    
+    <EditText 
+        android:id="@+id/edittext_notification_title"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:inputType="textShortMessage"
+        android:maxLines="1"
+        android:hint="@string/string_edittext_hint_enter_notification_title"
+        android:maxLength="15">
+        
+    </EditText>
+    
+    <EditText 
+        android:id="@+id/edittext_notification_message"
+        android:layout_width="fill_parent"
+        android:layout_height="80dip"
+        android:layout_marginTop="5dip"
+        android:inputType="textLongMessage"
+        android:maxLines="2"
+        android:hint="@string/string_edittext_hint_enter_notification_message"
+        android:maxLength="10">
+        
+    </EditText>
+	
+    <CheckBox
+        android:id="@+id/checkbox_should_vibrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:text="@string/string_checkbox_text_vibrate_on_notification">
+        
+    </CheckBox>
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:orientation="horizontal"
+        android:gravity="center">
+    	<Button 
+	        android:id="@+id/button_send_notification"
+	        android:layout_width="wrap_content" 
+	        android:layout_height="wrap_content"
+	        android:text="@string/string_button_text_send_notification">
+	    
+	    </Button>	        
+    </LinearLayout>    
+</LinearLayout>

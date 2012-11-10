@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:gravity="left" >
+    
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:maxLines="1"
+        android:text="Details of notification:"
+        android:gravity="center_horizontal">
+    
+    </TextView>
+    
+    <TextView 
+        android:id="@+id/textview_received_notification_id"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:maxLines="1"
+        android:gravity="center_horizontal">
+    
+    </TextView>
+    
+    <TextView 
+        android:id="@+id/textview_received_notification_title"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:maxLines="1"
+        android:gravity="center_horizontal">
+    
+    </TextView>
+    
+    <TextView 
+        android:id="@+id/textview_received_notification_message"
+        android:layout_width="fill_parent"
+        android:layout_height="80dip"
+        android:maxLines="2"
+        android:gravity="center_horizontal">
+    
+    </TextView>
+	
+        
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:orientation="horizontal"
+        android:gravity="center">
+    	<Button 
+	        android:id="@+id/button_dismiss_notification"
+	        android:layout_width="wrap_content" 
+	        android:layout_height="wrap_content"
+	        android:text="@string/string_button_text_dissmiss">
+	    
+	    </Button>	        
+    </LinearLayout>    
+</LinearLayout>
